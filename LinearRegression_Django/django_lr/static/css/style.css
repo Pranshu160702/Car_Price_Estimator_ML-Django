@@ -1,0 +1,80 @@
+@font-face {
+    font-family: skyer;
+    src: url(../fonts/skyer.ttf);
+}
+*{
+    padding: 0%;
+    margin: 0%;
+    letter-spacing: 2px;
+    font-family: skyer;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    gap: 30px;
+    height: 100vh;
+    background-image: url(../imgs/car_background.jpg);
+    background-size: cover;
+    color: #fff;
+    padding-left: 100px;
+ }
+ h1{
+    font-size: 65px;
+ }
+ h5{
+    margin-top: -25px;
+ }
+select {
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    -ms-appearance:none;
+    appearance:none;
+    outline:0;
+    box-shadow:none;
+    border:0!important;
+    background: #5c6664;
+    background-image: none;
+    flex: 1;
+    padding: 0 .5em;
+    padding-left: 10px;
+    color:#fff;
+    cursor:pointer;
+    font-size: 12px;
+ }
+ select::-ms-expand {
+    display: none;
+ }
+ .select {
+    position: relative;
+    display: flex;
+    width: 20em;
+    height: 3em;
+    line-height: 3;
+    background: #5c6664;
+    overflow: hidden;
+    border-radius: .25em;
+    margin-bottom: 20px;
+ }
+ .select::after {
+    content: '\25BC';
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0 1em;
+    background: #2b2e2e;
+    cursor:pointer;
+    pointer-events:none;
+    transition:.25s all ease;
+ }
+ .select:hover::after {
+    color: #23b499;
+ }
+ button{
+    padding: 15px;
+    background-color: #2b2e2e;
+    border: 1px solid white;
+    color: white;
+    border-radius: 5px;
+ }

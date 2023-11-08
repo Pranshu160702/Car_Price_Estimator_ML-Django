@@ -1,0 +1,34 @@
+@font-face {
+    font-family: skyer;
+    src: url(../fonts/skyer.ttf);
+}
+*{
+    padding: 0%;
+    margin: 0%;
+    letter-spacing: 2px;
+    font-family: skyer;
+    font-size: 60px;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    align-items: left;
+    gap: 30px;
+    height: 100vh;
+    background-image: url(../imgs/car_background.jpg);
+    background-size: cover;
+    color: #fff;
+    padding: 50px;
+ }
+ #output{
+    background-color: transparent;
+    padding: 30px;
+    height: 30px;
+    width: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid white;
+    border-radius: 10px;
+  }

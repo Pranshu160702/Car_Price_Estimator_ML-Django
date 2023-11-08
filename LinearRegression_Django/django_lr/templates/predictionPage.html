@@ -1,0 +1,16 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Price Predictor</title>
+    <link rel="stylesheet" href="{% static 'css/predictionPage.css' %}">
+</head>
+<body>
+    <div id="output">
+        <h4><span id="prediction">{{ final_price }}</span></h4>
+    </div>
+</body>
+</html>

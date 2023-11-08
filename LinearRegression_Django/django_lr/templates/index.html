@@ -1,0 +1,58 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Price Predictor</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <h1>CAR PRICE ESTIMATOR</h1>
+    <h5>(Linear Regression Model)</h5>
+    <form method="post" action="{% url 'predict' %}">
+        {% csrf_token %}
+        <div class="select">
+            <select name="company" id="company" required>
+                <option hidden disabled selected value>Choose Car Company</option>
+                {% for company in companies %}
+                    <option>{{ company }}</option>
+                {% endfor %}    
+            </select>
+        </div>
+        <div class="select">
+            <select name="car_model" id="car_model" required>
+                <option hidden disabled selected value>Choose Car Model</option>
+                {% for car_model in car_models %}
+                    <option>{{ car_model }}</option>
+                {% endfor %}    
+            </select>
+        </div>
+        <div class="select">
+            <select name="year" id="year" required>
+                <option hidden disabled selected value>Choose Year of Manufacturing</option>
+                {% for year in years %}
+                    <option>{{ year }}</option>
+                {% endfor %}    
+            </select>
+        </div>
+        <div class="select">
+            <select name="fuel_type" id="fuel_type" required>
+                <option hidden disabled selected value>Choose Fuel Type</option>
+                {% for fuel_type in fuel_types %}
+                    <option>{{ fuel_type }}</option>
+                {% endfor %}    
+            </select>
+        </div>
+        <div class="select">
+            <select name="kms_driven" id="kms_driven" required>
+                <option hidden disabled selected value>Choose Distance Driven (KMS)</option>
+                {% for km_driven in kms_driven %}
+                    <option>{{ km_driven }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <button id="submitBtn" type="submit">Estimate</button>
+    </form>
+</body>
+</html>
